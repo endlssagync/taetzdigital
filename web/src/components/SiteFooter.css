@@ -1,0 +1,116 @@
+.site-footer {
+  position: relative;
+  background: #000;
+  color: var(--td-text-secondary);
+  padding: clamp(2.5rem, 5vw, 3.5rem) clamp(1.25rem, 5vw, 5rem) clamp(5rem, 8vw, 6rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 80% at 50% 0%, rgba(204, 0, 255, 0.12), transparent 55%);
+  pointer-events: none;
+}
+
+.site-footer__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0;
+}
+
+.site-footer__logo {
+  display: block;
+  width: min(220px, 55vw);
+  height: auto;
+  max-height: 5.5rem;
+  object-fit: contain;
+  object-position: center;
+}
+
+.site-footer__tagline {
+  margin: 0;
+  max-width: 28rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--td-text-muted);
+}
+
+.site-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.site-footer__link {
+  color: var(--td-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-footer__link:hover {
+  color: var(--td-primary-light);
+}
+
+.site-footer__dot {
+  color: var(--td-text-muted);
+  user-select: none;
+}
+
+.site-footer__legal {
+  margin: 0.5rem 0 0;
+  font-size: 0.78rem;
+  color: #555;
+}
+
+.float-support {
+  position: fixed;
+  left: clamp(1rem, 3vw, 1.5rem);
+  bottom: clamp(1rem, 3vw, 1.5rem);
+  z-index: 400;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--td-primary) 0%, var(--td-primary-light) 100%);
+  box-shadow: var(--td-glow);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+}
+
+.float-support:hover {
+  transform: scale(1.07);
+  box-shadow: var(--td-glow-strong);
+}
+
+.float-support:active {
+  transform: scale(0.98);
+}
+
+.float-support__icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
+  color: #ffffff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+}

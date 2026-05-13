@@ -1,0 +1,139 @@
+.wk {
+  position: relative;
+  padding: clamp(3rem, 6.5vw, 5rem) clamp(1.25rem, 5vw, 5rem);
+  overflow-x: clip;
+}
+
+.wk--5 {
+  background: #fafafa;
+  color: #111;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.wk--6 {
+  background: #ffffff;
+  color: #111;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.wk__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.wk__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.75rem, 4vw, 3rem);
+  align-items: center;
+}
+
+@media (max-width: 880px) {
+  .wk__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wk--5 .wk__figure {
+    order: 2;
+  }
+
+  .wk--5 .wk__copy {
+    order: 1;
+  }
+
+  .wk--6 .wk__figure {
+    order: 1;
+  }
+
+  .wk--6 .wk__copy {
+    order: 2;
+  }
+}
+
+.wk__copy {
+  min-width: 0;
+}
+
+.wk__title {
+  position: relative;
+  margin: 0 0 1.25rem;
+  padding-left: 1.35rem;
+  font-size: clamp(1.15rem, 2.1vw, 1.45rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #0a0a0a;
+}
+
+.wk__title--sans {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  text-transform: none;
+}
+
+.wk__title-wrap {
+  display: block;
+}
+
+.wk__title-accent {
+  color: var(--td-success);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.wk__dot {
+  position: absolute;
+  left: 0;
+  top: 0.42rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--td-primary);
+  box-shadow: 0 0 0 5px rgba(204, 0, 255, 0.16);
+}
+
+.wk__body {
+  font-family: var(--font-sans);
+  font-size: clamp(0.98rem, 1.12vw, 1.08rem);
+  font-weight: 500;
+  line-height: 1.75;
+  color: #333;
+}
+
+.wk__body p {
+  margin: 0 0 1rem;
+}
+
+.wk__body p:last-child {
+  margin-bottom: 0;
+}
+
+.wk__body strong {
+  color: #000;
+  font-weight: 700;
+}
+
+.wk-mark {
+  background: rgba(255, 230, 80, 0.95);
+  color: #0a0a0a;
+  padding: 0.08em 0.18em;
+  border-radius: 3px;
+  font-weight: 700;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.wk__figure {
+  margin: 0;
+}
+
+.wk__placeholder {
+  border-radius: 18px;
+}
+
+.wk__placeholder--stage {
+  aspect-ratio: 4 / 3;
+}
+
+.wk__placeholder--video {
+  aspect-ratio: 16 / 10;
+  border-radius: 20px;
+}

@@ -1,0 +1,113 @@
+.plus-section {
+  position: relative;
+  background: linear-gradient(180deg, #08080c 0%, #0a0a0f 45%, #0a0a0a 100%);
+  color: var(--td-text-secondary);
+  padding: clamp(3rem, 7vw, 5.25rem) clamp(1.25rem, 5vw, 5rem) clamp(3.5rem, 7vw, 5rem);
+  overflow-x: clip;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.plus-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 75% 50% at 50% 0%, rgba(204, 0, 255, 0.1), transparent 58%);
+  pointer-events: none;
+}
+
+.plus-section__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.plus-section__title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: clamp(1.65rem, 3.4vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--td-text);
+  margin: 0 0 clamp(2rem, 4.5vw, 2.75rem);
+}
+
+.plus-section__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.75rem, 4vw, 3rem);
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .plus-section__row {
+    grid-template-columns: 1fr;
+  }
+
+  .plus-section__visual {
+    order: 2;
+  }
+
+  .plus-section__copy {
+    order: 1;
+  }
+}
+
+.plus-section__copy {
+  font-size: clamp(0.95rem, 1.12vw, 1.05rem);
+  line-height: 1.68;
+  color: var(--td-text-secondary);
+}
+
+.plus-section__copy p {
+  margin: 0 0 1rem;
+}
+
+.plus-section__copy p:last-child {
+  margin-bottom: 0;
+}
+
+.plus-section__lead {
+  position: relative;
+  padding-left: 1.35rem;
+}
+
+.plus-section__dot {
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--td-primary);
+  box-shadow: 0 0 0 5px rgba(204, 0, 255, 0.22);
+}
+
+.plus-section__copy strong {
+  color: var(--td-text);
+  font-weight: 700;
+}
+
+.plus-section__visual {
+  margin: 0;
+}
+
+.plus-section__placeholder {
+  aspect-ratio: 16 / 11;
+  border-radius: 20px;
+}
+
+.plus-section__footer {
+  margin: clamp(2rem, 4vw, 2.75rem) auto 0;
+  max-width: 46rem;
+  text-align: center;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.65;
+  color: var(--td-text-secondary);
+}
+
+.plus-section__footer strong {
+  color: var(--td-text);
+  font-weight: 700;
+}

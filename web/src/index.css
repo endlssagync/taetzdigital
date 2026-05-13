@@ -1,0 +1,125 @@
+:root {
+  --td-black: #000000;
+  --td-surface: #0a0a0a;
+  --td-surface-mid: #111111;
+  --td-border: #1f1f1f;
+  --td-text: #ffffff;
+  --td-text-secondary: #cccccc;
+  --td-text-muted: #888888;
+  --td-primary: #cc00ff;
+  --td-primary-light: #e040fb;
+  --td-primary-dark: #9900cc;
+  --td-danger: #ff2020;
+  --td-success: #39ff14;
+  --td-urgent: #ff4d6d;
+  --td-glow: 0 0 24px rgba(204, 0, 255, 0.5), 0 0 64px rgba(204, 0, 255, 0.22);
+  --td-glow-strong: 0 0 40px rgba(204, 0, 255, 0.65), 0 0 100px rgba(204, 0, 255, 0.28);
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-logo: "Bebas Neue", Impact, sans-serif;
+
+  /* Scrollbar (Firefox uses solid thumb + track only) */
+  --td-scrollbar-track: #0e0e12;
+  --td-scrollbar-thumb: #6b1f7a;
+  --td-scrollbar-thumb-hover: var(--td-primary);
+  /* Text selection / highlight */
+  --td-selection-bg: rgba(204, 0, 255, 0.62);
+  --td-selection-color: #ffffff;
+}
+
+/* Plain gradient blocks — swap for <img> when assets are ready */
+.td-placeholder {
+  display: block;
+  width: 100%;
+  border-radius: 18px;
+  min-height: 0;
+  background: linear-gradient(125deg, #161018 0%, #0a060e 45%, #1a1224 100%);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.td-placeholder--light {
+  background: linear-gradient(125deg, #e8e6ef 0%, #d4d0e2 50%, #e2dce8 100%);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--td-black);
+  color: var(--td-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* —— Text selection (highlight) —— */
+::selection {
+  background-color: var(--td-selection-bg);
+  color: var(--td-selection-color);
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background-color: var(--td-selection-bg);
+  color: var(--td-selection-color);
+  text-shadow: none;
+}
+
+/* —— Scrollbars: Firefox —— */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--td-scrollbar-thumb) var(--td-scrollbar-track);
+}
+
+/* —— Scrollbars: WebKit (Chrome, Edge, Safari) —— */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--td-scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(224, 64, 251, 0.55) 0%,
+    rgba(153, 0, 204, 0.95) 100%
+  );
+  border-radius: 999px;
+  border: 2px solid var(--td-scrollbar-track);
+  box-shadow: 0 0 12px rgba(204, 0, 255, 0.15);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--td-primary-light), var(--td-primary));
+  box-shadow: 0 0 16px rgba(204, 0, 255, 0.35);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: var(--td-primary-dark);
+}
+
+*::-webkit-scrollbar-corner {
+  background: var(--td-scrollbar-track);
+}

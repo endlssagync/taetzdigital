@@ -1,0 +1,645 @@
+{
+  "meta": {
+    "name": "Taetz Digital Design System",
+    "version": "1.0.0",
+    "description": "Official design tokens and component specifications for Taetz Digital — a performance advertising brand built on dark, high-contrast visuals with neon accents.",
+    "brand_voice": "Bold, confident, conversion-focused",
+    "created": "2026-05-12"
+  },
+
+  "color": {
+    "brand": {
+      "primary": {
+        "value": "#CC00FF",
+        "description": "Electric purple — primary brand color used in the word 'DIGITAL' in logo, highlighted text, and primary CTA backgrounds",
+        "usage": ["logo accent", "hero highlight text", "primary button fill", "glow effects"]
+      },
+      "primary_light": {
+        "value": "#E040FB",
+        "description": "Lighter purple variant used in button glow halos and hover states"
+      },
+      "primary_dark": {
+        "value": "#9900CC",
+        "description": "Darker purple used for pressed/active states on primary buttons"
+      },
+      "accent_green": {
+        "value": "#39FF14",
+        "description": "Neon green used on select ad creative cards (partnership badges, sale callouts)",
+        "usage": ["ad card badges", "success indicators", "secondary emphasis"]
+      },
+      "accent_red": {
+        "value": "#FF2020",
+        "description": "Alert red seen in card UI overlays (e.g., LIVE badges)"
+      }
+    },
+
+    "neutral": {
+      "black": {
+        "value": "#000000",
+        "description": "True black — primary page background"
+      },
+      "surface_dark": {
+        "value": "#0A0A0A",
+        "description": "Slightly elevated surface for cards and modals on black backgrounds"
+      },
+      "surface_mid": {
+        "value": "#111111",
+        "description": "Secondary surface level"
+      },
+      "border_subtle": {
+        "value": "#1F1F1F",
+        "description": "Subtle dividers on dark backgrounds"
+      },
+      "text_primary": {
+        "value": "#FFFFFF",
+        "description": "Primary body and headline text on dark backgrounds"
+      },
+      "text_secondary": {
+        "value": "#CCCCCC",
+        "description": "Secondary labels, nav links, and supporting copy"
+      },
+      "text_muted": {
+        "value": "#888888",
+        "description": "Placeholder text, metadata, and disabled states"
+      }
+    },
+
+    "gradient": {
+      "primary_glow": {
+        "value": "radial-gradient(ellipse at center, rgba(204,0,255,0.6) 0%, rgba(204,0,255,0) 70%)",
+        "description": "Used beneath the 'Get started' CTA button as a glowing halo effect"
+      },
+      "cta_button": {
+        "value": "linear-gradient(135deg, #CC00FF 0%, #E040FB 50%, #CC00FF 100%)",
+        "description": "Gradient fill for the primary pill CTA button"
+      },
+      "hero_fade": {
+        "value": "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%)",
+        "description": "Vertical fade overlay on hero section to improve text legibility over imagery"
+      },
+      "card_overlay": {
+        "value": "linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.7) 100%)",
+        "description": "Bottom fade on rotated ad cards to suggest depth"
+      }
+    },
+
+    "semantic": {
+      "background": "#000000",
+      "surface": "#0A0A0A",
+      "border": "#1F1F1F",
+      "text": "#FFFFFF",
+      "text_subtle": "#CCCCCC",
+      "interactive": "#CC00FF",
+      "interactive_hover": "#E040FB",
+      "interactive_active": "#9900CC",
+      "success": "#39FF14",
+      "danger": "#FF2020"
+    }
+  },
+
+  "typography": {
+    "font_family": {
+      "primary": {
+        "value": "'Inter', 'Helvetica Neue', Arial, sans-serif",
+        "description": "Primary sans-serif used for all UI text. The logo uses a custom bold geometric variant."
+      },
+      "logo": {
+        "value": "'Bebas Neue', 'Impact', 'Arial Black', sans-serif",
+        "description": "Condensed uppercase display font for the TAETZ wordmark"
+      },
+      "mono": {
+        "value": "'JetBrains Mono', 'Courier New', monospace",
+        "description": "Monospaced font for any data, code, or stats displays"
+      }
+    },
+
+    "font_weight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "extrabold": 800,
+      "black": 900
+    },
+
+    "font_size": {
+      "xs":   { "value": "0.75rem",  "px": 12 },
+      "sm":   { "value": "0.875rem", "px": 14 },
+      "base": { "value": "1rem",     "px": 16 },
+      "md":   { "value": "1.125rem", "px": 18 },
+      "lg":   { "value": "1.25rem",  "px": 20 },
+      "xl":   { "value": "1.5rem",   "px": 24 },
+      "2xl":  { "value": "1.875rem", "px": 30 },
+      "3xl":  { "value": "2.25rem",  "px": 36 },
+      "4xl":  { "value": "3rem",     "px": 48 },
+      "5xl":  { "value": "3.75rem",  "px": 60 },
+      "hero": { "value": "4.5rem",   "px": 72, "description": "Max headline size for desktop hero" }
+    },
+
+    "line_height": {
+      "tight":   1.1,
+      "snug":    1.25,
+      "normal":  1.5,
+      "relaxed": 1.625,
+      "loose":   2
+    },
+
+    "letter_spacing": {
+      "tighter": "-0.05em",
+      "tight":   "-0.025em",
+      "normal":  "0em",
+      "wide":    "0.025em",
+      "wider":   "0.05em",
+      "widest":  "0.1em"
+    },
+
+    "scale": {
+      "hero_headline": {
+        "size": "3xl–5xl",
+        "weight": "bold",
+        "line_height": "tight",
+        "letter_spacing": "tight",
+        "color": "text_primary",
+        "example": "We Turn Clicks Into Clients. Advertising That Converts."
+      },
+      "hero_headline_accent": {
+        "inherits": "hero_headline",
+        "color": "brand.primary",
+        "description": "Words like 'Clicks' and 'Clients.' rendered in #CC00FF within the headline"
+      },
+      "section_title": {
+        "size": "2xl–3xl",
+        "weight": "bold",
+        "line_height": "snug",
+        "color": "text_primary"
+      },
+      "nav_link": {
+        "size": "base",
+        "weight": "medium",
+        "letter_spacing": "normal",
+        "color": "text_secondary"
+      },
+      "body": {
+        "size": "base–md",
+        "weight": "regular",
+        "line_height": "relaxed",
+        "color": "text_secondary"
+      },
+      "label": {
+        "size": "sm",
+        "weight": "semibold",
+        "letter_spacing": "wide",
+        "text_transform": "uppercase"
+      },
+      "logo_primary": {
+        "font_family": "logo",
+        "size": "2xl",
+        "weight": "black",
+        "letter_spacing": "widest",
+        "text_transform": "uppercase",
+        "color": "#FFFFFF",
+        "description": "TAETZ wordmark"
+      },
+      "logo_accent": {
+        "inherits": "logo_primary",
+        "color": "#CC00FF",
+        "description": "DIGITAL wordmark below TAETZ"
+      }
+    }
+  },
+
+  "spacing": {
+    "description": "4px base unit scale",
+    "base_unit": 4,
+    "scale": {
+      "0":    "0px",
+      "0.5":  "2px",
+      "1":    "4px",
+      "1.5":  "6px",
+      "2":    "8px",
+      "2.5":  "10px",
+      "3":    "12px",
+      "4":    "16px",
+      "5":    "20px",
+      "6":    "24px",
+      "7":    "28px",
+      "8":    "32px",
+      "10":   "40px",
+      "12":   "48px",
+      "14":   "56px",
+      "16":   "64px",
+      "20":   "80px",
+      "24":   "96px",
+      "32":   "128px",
+      "40":   "160px",
+      "48":   "192px",
+      "64":   "256px"
+    },
+    "semantic": {
+      "page_gutter":       "clamp(16px, 5vw, 80px)",
+      "section_gap":       "96px",
+      "component_gap":     "48px",
+      "element_gap":       "24px",
+      "inline_gap":        "12px",
+      "nav_height":        "72px",
+      "hero_padding_top":  "120px",
+      "hero_padding_bottom": "80px"
+    }
+  },
+
+  "border_radius": {
+    "none":   "0px",
+    "sm":     "4px",
+    "base":   "8px",
+    "md":     "12px",
+    "lg":     "16px",
+    "xl":     "20px",
+    "2xl":    "24px",
+    "3xl":    "32px",
+    "card":   "20px",
+    "pill":   "9999px",
+    "circle": "50%"
+  },
+
+  "shadow": {
+    "none": "none",
+    "sm":   "0 1px 3px rgba(0,0,0,0.4)",
+    "base": "0 4px 12px rgba(0,0,0,0.5)",
+    "md":   "0 8px 24px rgba(0,0,0,0.6)",
+    "lg":   "0 16px 48px rgba(0,0,0,0.7)",
+    "glow_primary": "0 0 24px rgba(204,0,255,0.5), 0 0 48px rgba(204,0,255,0.25)",
+    "glow_primary_intense": "0 0 40px rgba(204,0,255,0.8), 0 0 80px rgba(204,0,255,0.4)",
+    "glow_green": "0 0 16px rgba(57,255,20,0.5)",
+    "card_raised": "0 20px 60px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.05)"
+  },
+
+  "animation": {
+    "duration": {
+      "instant":  "50ms",
+      "fast":     "100ms",
+      "normal":   "200ms",
+      "slow":     "350ms",
+      "slower":   "500ms",
+      "slowest":  "800ms"
+    },
+    "easing": {
+      "linear":      "linear",
+      "ease":        "ease",
+      "ease_in":     "cubic-bezier(0.4, 0, 1, 1)",
+      "ease_out":    "cubic-bezier(0, 0, 0.2, 1)",
+      "ease_in_out": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "spring":      "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      "bounce":      "cubic-bezier(0.68, -0.55, 0.265, 1.55)"
+    },
+    "presets": {
+      "button_hover": {
+        "duration": "200ms",
+        "easing": "ease_out",
+        "properties": ["transform", "box-shadow", "background-color"]
+      },
+      "card_fan": {
+        "description": "Arc fan layout animation for ad creative cards in the hero section",
+        "type": "staggered_rotation",
+        "stagger_delay": "60ms",
+        "duration": "600ms",
+        "easing": "ease_out",
+        "transform_origin": "bottom center"
+      },
+      "glow_pulse": {
+        "type": "keyframe",
+        "keyframes": {
+          "0%":   { "opacity": 0.5, "transform": "scale(1)" },
+          "50%":  { "opacity": 1,   "transform": "scale(1.05)" },
+          "100%": { "opacity": 0.5, "transform": "scale(1)" }
+        },
+        "duration": "3s",
+        "easing": "ease_in_out",
+        "iteration_count": "infinite"
+      },
+      "fade_up": {
+        "type": "keyframe",
+        "from": { "opacity": 0, "transform": "translateY(24px)" },
+        "to":   { "opacity": 1, "transform": "translateY(0)" },
+        "duration": "500ms",
+        "easing": "ease_out"
+      }
+    }
+  },
+
+  "layout": {
+    "max_width": {
+      "content": "1200px",
+      "wide":    "1440px",
+      "narrow":  "720px",
+      "text":    "640px"
+    },
+    "grid": {
+      "columns": 12,
+      "gutter":  "24px",
+      "margin":  "clamp(16px, 5vw, 80px)"
+    },
+    "breakpoints": {
+      "xs":  "375px",
+      "sm":  "640px",
+      "md":  "768px",
+      "lg":  "1024px",
+      "xl":  "1280px",
+      "2xl": "1536px"
+    },
+    "z_index": {
+      "base":     0,
+      "raised":   10,
+      "dropdown": 100,
+      "sticky":   200,
+      "overlay":  300,
+      "modal":    400,
+      "toast":    500,
+      "tooltip":  600
+    }
+  },
+
+  "components": {
+    "navigation": {
+      "description": "Top navigation bar — transparent over hero, potentially dark on scroll",
+      "height": "72px",
+      "background": "transparent",
+      "background_scrolled": "rgba(0,0,0,0.85)",
+      "backdrop_filter_scrolled": "blur(12px)",
+      "border_bottom": "none",
+      "border_bottom_scrolled": "1px solid rgba(255,255,255,0.08)",
+      "padding_x": "clamp(16px, 5vw, 80px)",
+      "position": "fixed",
+      "z_index": 200,
+      "layout": "space-between",
+      "logo": {
+        "height": "36px",
+        "margin_right": "auto"
+      },
+      "links": {
+        "gap": "32px",
+        "font_size": "base",
+        "font_weight": "medium",
+        "color": "#CCCCCC",
+        "color_hover": "#FFFFFF",
+        "color_active": "#FFFFFF",
+        "transition": "color 200ms ease"
+      },
+      "cta_button": {
+        "inherits": "button.primary",
+        "size": "sm",
+        "description": "'Book Consultation' button — top-right corner"
+      }
+    },
+
+    "button": {
+      "base": {
+        "font_family": "primary",
+        "font_weight": "semibold",
+        "border_radius": "pill",
+        "cursor": "pointer",
+        "display": "inline-flex",
+        "align_items": "center",
+        "justify_content": "center",
+        "transition": "all 200ms ease",
+        "white_space": "nowrap",
+        "border": "none",
+        "outline_focus": "2px solid #CC00FF",
+        "outline_offset_focus": "3px"
+      },
+      "sizes": {
+        "sm": {
+          "padding": "8px 20px",
+          "font_size": "0.875rem",
+          "height": "36px"
+        },
+        "md": {
+          "padding": "12px 28px",
+          "font_size": "1rem",
+          "height": "44px"
+        },
+        "lg": {
+          "padding": "16px 40px",
+          "font_size": "1.125rem",
+          "height": "56px",
+          "description": "Used for the hero 'Get started' CTA"
+        }
+      },
+      "variants": {
+        "primary": {
+          "background": "linear-gradient(135deg, #CC00FF, #E040FB)",
+          "color": "#FFFFFF",
+          "box_shadow": "0 0 24px rgba(204,0,255,0.5)",
+          "hover": {
+            "background": "linear-gradient(135deg, #D400FF, #EE5CFB)",
+            "box_shadow": "0 0 40px rgba(204,0,255,0.8), 0 0 80px rgba(204,0,255,0.4)",
+            "transform": "translateY(-2px) scale(1.02)"
+          },
+          "active": {
+            "transform": "translateY(0) scale(0.98)",
+            "box_shadow": "0 0 16px rgba(204,0,255,0.4)"
+          }
+        },
+        "secondary": {
+          "background": "transparent",
+          "color": "#FFFFFF",
+          "border": "1px solid rgba(255,255,255,0.2)",
+          "hover": {
+            "border_color": "rgba(204,0,255,0.6)",
+            "color": "#CC00FF",
+            "box_shadow": "0 0 16px rgba(204,0,255,0.2)"
+          }
+        },
+        "ghost": {
+          "background": "transparent",
+          "color": "#CCCCCC",
+          "hover": {
+            "color": "#FFFFFF",
+            "background": "rgba(255,255,255,0.05)"
+          }
+        }
+      }
+    },
+
+    "hero": {
+      "description": "Full-viewport hero section with fan of ad creative cards and centered headline",
+      "background": "#000000",
+      "min_height": "100vh",
+      "padding_top": "120px",
+      "padding_bottom": "80px",
+      "layout": "column centered",
+      "card_fan": {
+        "description": "Semi-circular arc of rotated ad creative cards spanning the full width of the hero",
+        "card_count": 7,
+        "center_card_index": 3,
+        "rotation_spread_deg": 60,
+        "card_width": "clamp(140px, 14vw, 220px)",
+        "card_aspect_ratio": "9/16",
+        "card_border_radius": "20px",
+        "card_overlap": "negative margin to fan outward",
+        "transform_origin": "bottom center",
+        "center_card_scale": 1.1,
+        "outer_card_scale": 0.85,
+        "center_card_z": 10,
+        "rotations": [-45, -28, -14, 0, 14, 28, 45],
+        "vertical_offset_curve": "arc — center card highest, outer cards progressively lower",
+        "card_shadow": "0 20px 60px rgba(0,0,0,0.8)"
+      },
+      "headline": {
+        "max_width": "640px",
+        "text_align": "center",
+        "font_size": "clamp(2rem, 5vw, 3.75rem)",
+        "font_weight": "bold",
+        "line_height": 1.1,
+        "color": "#FFFFFF",
+        "accent_color": "#CC00FF",
+        "margin_top": "40px"
+      },
+      "cta": {
+        "description": "Hero 'Get started' pill button with purple glow halo beneath it",
+        "margin_top": "32px",
+        "glow_element": {
+          "type": "radial gradient pseudo-element",
+          "color": "rgba(204,0,255,0.6)",
+          "width": "200px",
+          "height": "60px",
+          "blur": "40px",
+          "position": "absolute bottom -20px center",
+          "animation": "glow_pulse 3s ease-in-out infinite"
+        }
+      }
+    },
+
+    "card": {
+      "ad_creative": {
+        "description": "Rotated ad image cards used in the hero fan layout",
+        "background": "#111111",
+        "border_radius": "20px",
+        "overflow": "hidden",
+        "border": "1px solid rgba(255,255,255,0.08)",
+        "box_shadow": "0 20px 60px rgba(0,0,0,0.8)",
+        "image_fit": "cover",
+        "image_position": "center"
+      },
+      "service": {
+        "description": "Service offering cards in content sections",
+        "background": "#0A0A0A",
+        "border_radius": "16px",
+        "border": "1px solid rgba(255,255,255,0.06)",
+        "padding": "32px",
+        "hover": {
+          "border_color": "rgba(204,0,255,0.3)",
+          "box_shadow": "0 0 24px rgba(204,0,255,0.15)",
+          "transform": "translateY(-4px)"
+        },
+        "transition": "all 350ms ease"
+      },
+      "result": {
+        "description": "Results/metrics cards",
+        "background": "#0A0A0A",
+        "border_radius": "16px",
+        "border": "1px solid rgba(204,0,255,0.15)",
+        "padding": "24px 32px",
+        "accent_bar": {
+          "width": "3px",
+          "height": "100%",
+          "background": "#CC00FF",
+          "position": "left"
+        }
+      }
+    },
+
+    "badge": {
+      "base": {
+        "display": "inline-flex",
+        "align_items": "center",
+        "gap": "6px",
+        "padding": "4px 12px",
+        "border_radius": "pill",
+        "font_size": "0.75rem",
+        "font_weight": "semibold",
+        "letter_spacing": "0.05em",
+        "text_transform": "uppercase"
+      },
+      "variants": {
+        "purple": {
+          "background": "rgba(204,0,255,0.15)",
+          "color": "#CC00FF",
+          "border": "1px solid rgba(204,0,255,0.3)"
+        },
+        "green": {
+          "background": "rgba(57,255,20,0.15)",
+          "color": "#39FF14",
+          "border": "1px solid rgba(57,255,20,0.3)"
+        },
+        "red_live": {
+          "background": "#FF2020",
+          "color": "#FFFFFF",
+          "description": "LIVE badge used on ad cards"
+        }
+      }
+    },
+
+    "logo": {
+      "description": "Taetz Digital two-line wordmark",
+      "wordmark_line1": {
+        "text": "TAETZ",
+        "color": "#FFFFFF",
+        "font_family": "logo",
+        "font_weight": 900,
+        "letter_spacing": "0.08em"
+      },
+      "wordmark_line2": {
+        "text": "DIGITAL",
+        "color": "#CC00FF",
+        "font_family": "logo",
+        "font_weight": 900,
+        "letter_spacing": "0.12em",
+        "margin_top": "-4px"
+      },
+      "layout": "stacked",
+      "min_width": "80px"
+    }
+  },
+
+  "iconography": {
+    "style": "outlined, minimal — single-stroke icons at 1.5–2px stroke weight",
+    "sizes": {
+      "sm": "16px",
+      "md": "20px",
+      "lg": "24px",
+      "xl": "32px"
+    },
+    "color": "inherit (text color of surrounding context)",
+    "recommended_library": "Lucide Icons or Heroicons (outline variant)"
+  },
+
+  "imagery": {
+    "ad_creatives": {
+      "style": "High-contrast social ad graphics. Bold typography, product photography, neon green/white text on dark or vibrant backgrounds.",
+      "aspect_ratios": ["9:16 (mobile feed)", "1:1 (square)", "4:5 (portrait)"],
+      "color_treatment": "Vivid, saturated. Brand greens, whites, purples dominant.",
+      "typography_on_ads": "Bold, condensed headline fonts. Short punchy copy (e.g. 'SAVE UP TO 20%', 'WE ARE NOW PARTNERED WITH INSTA360')"
+    },
+    "photo_style": "Dark, product-forward. High contrast. Minimal negative space."
+  },
+
+  "motion_principles": {
+    "philosophy": "Motion should feel purposeful, fast, and premium — never decorative for its own sake.",
+    "rules": [
+      "Entrance animations use fade-up with short duration (300–500ms)",
+      "Interactive elements respond instantly to hover (100–200ms)",
+      "Glow effects use slow pulsing animations to convey energy without distraction",
+      "Card fan layout uses staggered reveal on page load",
+      "Transitions prefer ease-out to feel snappy and responsive"
+    ]
+  },
+
+  "design_principles": {
+    "dark_first": "All surfaces default to black or near-black. Light is used sparingly to create focus.",
+    "neon_accents": "Electric purple (#CC00FF) and neon green (#39FF14) are used sparingly to draw attention to the most critical elements — headlines, CTAs, and badges.",
+    "conversion_hierarchy": "Visual hierarchy is engineered for conversion: CTA buttons are the brightest, most glow-heavy elements on screen.",
+    "bold_type": "Typography is heavy, confident, and large. Headlines never whisper — they demand attention.",
+    "high_contrast": "Minimum 4.5:1 contrast ratio for all body text. Headlines and CTAs exceed 7:1.",
+    "minimal_chrome": "Navigation and UI chrome are intentionally lightweight to keep the ad creative content and CTAs as the focal point."
+  }
+}
